@@ -1,0 +1,1016 @@
+/*
+
+	EXHO TEMPLATE  V1.0 BY SUPVIEW.BE
+	
+
+	01. Font Face
+	02. Generals Settings
+	03. Header Section Settings
+	04. Navigation Settings
+	04. Page1 / Header Section Settings
+	05. Page2 Section Settings
+	06. Page3 Section Settings
+	07. Page4 Section Settings
+	08. Testimonials Section Settings
+	09. Page5 / Subscribe Section Settings
+	10. Preloading Effect
+	11. Media Queries Settings
+			
+*/
+
+
+
+
+
+/* 01. FONT FACE ================================================== */
+
+
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 200;
+    src: local("Source Sans Pro ExtraLight"), local("SourceSansPro-ExtraLight"), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGEzfSP8PFPIaW8d4wHl9LSw.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/ODelI1aHBYDBqgeIAH2zlDLXPPWpYIJRcQ99gLLWTOQ.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 600;
+    src: local("Source Sans Pro Semibold"), local("SourceSansPro-Semibold"), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGNF2eBBnhZOFf_rblGEjGiI.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"), url("http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGBgDywzySrQSFSEUM6OqW_g.woff") format("woff");
+}
+
+
+	
+/* 02. GENERALS SETTINGS ================================================== */
+
+
+
+/* Container  */
+
+.container {	
+	z-index: 9999; /* IMPORTANT */
+	position: relative;
+	background: #FFF;
+	overflow: hidden;}
+
+
+
+/* Clear floats of children */
+.cbp-so-section:before,
+.cbp-so-section:after {
+	content: " ";
+	display: table;
+	padding:30px 0;}
+
+
+.cbp-so-section:after {
+	clear: both;}
+
+/* Sides */
+.cbp-so-side {
+	width: 100%;
+	margin: 0;
+	padding: 3em 2%;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	perspective: 1000;
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	-moz-transition: -moz-transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s;}
+
+
+
+
+body, html {
+    background: #E2E4E7;
+    padding: 0;
+       font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    -webkit-transition: opacity 400ms;
+    -moz-transition: opacity 400ms;
+    transition: opacity 400ms;
+}
+
+
+/* Selected text Color */
+
+::-moz-selection {
+    background: none;
+    color: #5ac6ff;
+}
+
+::selection {
+    background: none;
+    color: #5ac6ff;
+}
+
+.centered {
+    text-align: center;
+}
+
+b, strong {
+    font-weight: 800;
+}
+
+/* Make a space */
+
+.space {
+    padding: 20px 0;
+}
+
+
+
+h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0.75em 0.75em 0.25em;
+    font-size: 2.70em;
+}
+
+h2 {
+    font-size: 46px;
+    font-weight: 100;
+    line-height: 46px;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 0.33em;
+}
+
+h3 {
+    font: 38px 'Source Sans Pro', sans-serif;
+    font-weight: 100;
+    padding-bottom: 25px;
+    padding-top: 0px;
+}
+
+h4 {
+    font: 32px 'Source Sans Pro', sans-serif;
+    font-weight: normal;
+    font-weight: 100;
+    padding-bottom: 15px;
+}
+
+h5 {
+    font: 24px 'Source Sans Pro', sans-serif;
+    font-weight: normal;
+    font-weight: 100;
+    color:#FFF;
+}
+
+
+span {
+    color: #303333;
+    font: 1.5em 'Source Sans Pro', sans-serif;
+    opacity: 0.4;
+    padding-top: 0px;
+}
+
+/* Link */
+
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FFF;
+}  
+	
+/* Paragrah */
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: normal;
+    color: rgba(255,255,255,0.80);
+    line-height: 30px;
+}
+
+p a {
+    border-bottom: 1px dotted #888;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+p a:hover {
+    border-bottom: 1px dotted #FFF;
+}
+
+
+/* Link with a border button */
+
+.border-button {
+	background: url("../img/go-right.png") no-repeat scroll 95% 50% / 6px auto rgba(0, 0, 0, 0);
+    padding: 10px 35px 10px 15px;
+    font-weight: normal;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color:rgba(255,255,255,0.80);
+    border: 1px solid rgba(255,255,255,0.40);
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+.border-button:hover {
+    border: 1px solid #FFF;
+    color:#FFF;
+}
+
+
+
+/* 03. NAVIGATION SETTINGS ================================================== */
+
+
+nav #logo {
+    float: left;
+    z-index: 99999;
+}
+
+nav {
+    z-index: 999;
+    width: 100%;
+    height: 80px;
+}
+
+
+/* Some stylesheet reset */
+
+#nav, #nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* The main navigation bar */
+
+#nav {
+    width: 100%;
+ /* The menu will take the width of its container */;
+}
+
+#nav>li {
+    float: right;
+    position: relative;
+    padding: 20px 15px;
+}
+
+/* The main navigation links */
+
+#nav>li>a {
+	/* Layout */
+    display: block;
+	/* Typography */
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #FFF;
+    opacity: 1;
+    text-decoration: none;
+}
+
+/* The hover state of the links */
+
+#nav li:hover a, #nav li .selected {
+    color:rgba(255,255,255,0.60);
+}
+
+ 
+/* Navigation Fixed */ 
+ 
+.cbp-af-header {
+	font-family: 'Source Sans Pro', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    height: 80px;
+    overflow: hidden;
+    -webkit-transition: height 0.6s;
+    -moz-transition: height 0.6s;
+    transition: height 0.6s;
+}
+
+
+.cbp-af-header #logo img{
+    padding: 40px 20px 0px 0px;
+    max-width: 150px;
+}
+
+.cbp-af-header #nav a {
+    line-height: 60px;
+}
+
+/* Transitions */
+
+.cbp-af-header #logo,
+.cbp-af-header #nav a {
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s;
+}
+
+/* Button Share */
+
+.cbp-af-header .button {
+    border-radius: 20px;
+    color: #FFFFFF;
+    margin-top: -100px;
+    padding: 5px 15px;
+    letter-spacing: 2px;
+    background: #5ac6ff;
+    font-weight: 600;
+    float: right;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Button Share:hover */
+
+.cbp-af-header .button:hover {
+    color: #FFF;
+    background: #87d5fe;
+}
+
+
+/* Navigation effect on scroll down */
+
+
+.cbp-af-header.cbp-af-header-shrink {
+	height: 80px;
+	float: right;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+/* The button comes to the right place */
+
+.cbp-af-header.cbp-af-header-shrink .button {
+	margin-top:30px;
+	display: block;
+}
+
+/* The links goes up */
+
+.cbp-af-header.cbp-af-header-shrink #nav a {
+	margin-top: -150px;
+}
+	
+
+
+/* 04. PAGE 1 / HEADER SETTINGS ================================================== */
+
+
+
+.page1 {
+    background: url('../img/bg.jpg')#131313;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+}
+
+.page1 h1 {
+    text-align: center;
+    padding: 0;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.page1 h2 {
+    color: #FFF;
+    letter-spacing: 0px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Don't display the logo for Phone */
+
+.logo-phone {display: none;}
+
+/* Huge Title */
+
+.huge-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    height: 100px;
+}
+
+/* Go down text & Button */
+
+.go-down {
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    left: 0;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    height: 50px;
+}
+
+/* Social Ico */
+
+.social-ico {
+    float: right;
+    margin-top: 40px;
+} 
+
+
+
+/* 05. PAGE 2 SETTINGS ================================================== */
+
+
+
+.page2 {
+    background: #1F1F1F no-repeat center;
+    padding: 80px 0;
+}
+
+
+.page2 h3 {
+    color: #FFF;
+    font-weight: 100;
+}
+
+/* Image from right */
+
+.iphone {
+    bottom: 0;
+    right: -70px;
+    position: absolute;
+    top: 3%;
+}
+
+/* Brand icon */
+
+
+.brand li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 20px;
+    opacity: 1;
+}
+
+.brand li:first-child {
+    padding-left: 0px;
+}
+
+/* ToolTip */
+
+
+.has-tooltip {
+    position: relative;
+}
+
+.has-tooltip .tooltip {
+    pointer-events: none;
+    position: absolute;
+    z-index: 9999;
+    left: 50%;
+    bottom: -55px;
+    opacity: 0;
+    -webkit-transition: ease-out opacity 300ms;
+    -webkit-transition-delay: 0ms;
+    -moz-transition: ease-out opacity 300ms 0ms;
+    -o-transition: ease-out opacity 300ms 0ms;
+    transition: ease-out opacity 300ms 0ms;
+}
+
+.has-tooltip .tooltip span {
+    display: block;
+    white-space: nowrap;
+    position: relative;
+    background: rgba(255, 255, 255, 1);
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    padding: 12px 15px;
+    left: -50%;
+    font-size: 12px;
+    font-weight: normal;
+    color: #777;
+}
+
+.has-tooltip .tooltip span:after {
+    top: -40%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-bottom-color: rgba(255, 255, 255, 1);
+    border-width: 8px;
+    left: 50%;
+    margin-left: -8px;
+}
+
+.has-tooltip:hover span {
+    opacity: 1;
+}
+
+
+/* 06. PAGE 3 SETTINGS ================================================== */
+
+
+
+.page3 {
+    background: #131313;
+    z-index: 999;
+    position: relative;
+    padding: 80px 0;
+    height: 880px;
+}
+
+.page3 h3 {
+    color: #FFF;
+    font-weight: 100;
+}
+
+/* Article */
+
+.page3 .article {
+    position: relative;
+    z-index: 999;
+    background: #131313;
+    height: 100%;
+}
+
+/* Carousel */
+
+.page3 .slider-mac {
+	margin-left: 0%;
+	position: absolute;
+	max-width: 940px;
+	bottom: -220px;
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	-moz-transition: -moz-transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+/* Drag-it icon */
+
+#dragit {
+    background: rgba(19,19,19,0.7);
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    position: absolute;
+}
+
+#dragit img {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    bottom: 220px;
+    right: 0;
+}
+
+
+
+/* 07. PAGE 4 SETTINGS ================================================== */
+
+
+
+.page4 {
+    background: #191919;
+    z-index: 999;
+    position: relative;
+    padding: 60px 0;
+}
+
+.page4 h4 {
+	color:#FFF;
+}
+
+
+/* 08. TESTIMONIALS  ================================================== */
+
+
+#testimonial {
+	padding:80px 0; 
+	background: #131313; 
+	position: relative; 
+}
+
+
+#slider1 img{
+	width:170px;
+	height:170px;
+	margin:0px auto;
+	overflow:hidden;
+}
+
+#slider2 {padding-top: 15px; padding-right:15px;}
+
+#slider2 p {padding-right: 20px;}
+
+.title{
+	text-transform:uppercase;
+}
+
+.sub{
+	margin:10px 0;
+	color:rgba(255, 255, 255, 0.5);
+	font-size:14px;
+}
+
+.textblock{
+	line-height:21px;
+}
+
+.testblock{
+	position:relative;
+}
+
+
+
+/* 09. PAGE 5 / SUBSCRIBE SETTINGS ================================================== */
+
+
+.page5 {
+    background: #F5F5F5 no-repeat center;
+    z-index: 999;
+    padding: 40px 0 40px 0;
+    
+}
+
+form {
+    overflow: hidden;
+}
+	
+/* Mail Input Send */
+
+#signup input {
+    background-clip: padding-box;
+    background-color: #FFF;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    border-radius: 3px;
+    border: none;
+    margin: 15px 0;
+    color: #333;
+    height: 50px;
+    resize: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 9px 20px 8px;
+    transition: all .3s ease-in-out;
+    width: 98%;
+}
+
+#signup .button {
+    background-clip: padding-box;
+    background-color: #5ac6ff;
+    color: #FFF;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-size: 12px;
+    cursor: pointer;
+    margin: 15px 0;
+    height: 50px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    text-shadow: none;
+    text-transform: uppercase;
+    width: 98%;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+#signup .button:hover {
+    color: #FFF;
+    background: #87d5fe;
+}
+
+/* Promise we do not spam */
+
+#signup .spam {
+    font-size: 12px;
+    padding: 10px 0 10px 0;
+    color: #888;
+}
+
+#signup .spam img {
+    margin-top: 10px;
+    margin-bottom: -6px;
+}
+
+/* Message if it's ok */
+
+#signup .msg-ok {
+	font-size: 12px;
+    padding: 10px 0 10px 0;
+    color: #888;
+}
+
+
+
+/* 10. PRELOADING  ================================================== */
+    
+
+
+/* Preloader Effect */
+
+#preloader {
+    background-color: #FFF;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999999;
+}
+
+/* Preloading Animation */
+
+#loading-animation {
+    background-image: url("../img/loading.gif") ;
+    opacity: 0.7;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 200px;
+    left: 50%;
+    margin: -100px 0 0 -100px;
+    position: absolute;
+    top: 50%;
+    width: 200px;
+    border-radius: 4px;
+}
+
+
+            
+/* 11. MEDIA QUERIES  ============================================ */
+
+
+@media screen and (max-width: 768px) {
+
+
+.page2, .page3, .page4, .page5 {
+	padding:0px 0;
+	text-align: center;
+	width: 100%;
+}
+
+h2 {font-size: 42px;}
+
+h3 {font-size:32px;}
+
+.iphone {display: none; }
+
+.cbp-af-header {
+	display: none;
+}
+
+.logo-phone {display: block;}
+
+.huge-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    height: 250px;
+    padding:20px;
+}
+
+.page2 .columns {
+    position: relative;
+    width: 100%;
+}
+
+.has-tooltip .tooltip {
+    pointer-events: none;
+    position: absolute;
+    z-index: 9999;
+    left: auto;
+    bottom: -60px;
+    opacity: 0;
+    -webkit-transition: ease-out opacity 300ms;
+    -webkit-transition-delay: 0ms;
+    -moz-transition: ease-out opacity 300ms 0ms;
+    -o-transition: ease-out opacity 300ms 0ms;
+    transition: ease-out opacity 300ms 0ms;
+}
+
+.has-tooltip .tooltip span {
+    display: block;
+    white-space: nowrap;
+    position: relative;
+    background: rgba(255, 255, 255, 1);
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    padding: 12px 15px;
+    left: 0%;
+    font-size: 11px;
+    color: #777;
+}
+
+.has-tooltip .tooltip span:after {
+    top: -40%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-bottom-color: rgba(255, 255, 255, 1);
+    border-width: 8px;
+    left: 10%;
+    margin-left: -6px;
+}
+
+.page3 .slider-mac {
+	margin-left: 0%;
+	margin-top:80px;
+	position: relative;
+	max-width: 100%;
+	bottom: 0px;
+	padding-bottom: 0;
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	-moz-transition: -moz-transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+
+#dragit img {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    bottom: 80px;
+    right: 0;
+}
+
+.page3 {height: auto;}
+
+#testimonial {text-align: center;}
+
+#slider2 {margin-top:20px; padding-right: 0px;}
+
+#slider2 p {padding-right: 0px;}
+
+
+#showhide .trigger{display: none; left: -1000px;}
+
+	       
+}
+
+/* Media Queries for iPad in Portrait */
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { 
+
+#testimonial .columns{width: 100%;}
+
+#testimonial {text-align: center;}
+
+
+.iphone {
+    bottom: 0;
+    right: -180px;
+    position: absolute;
+    display: none;
+    top: 3%;}
+
+.page2 .row .six.columns { width: 100%;}
+
+.page3 .slider-mac {bottom: -70px; }
+
+.page5 {padding: 40px 0;}
+
+ }
+
+/* Media Queries for iPad in Landscape */
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+	
+.iphone {
+    bottom: 0;
+    right: -180px;
+    position: absolute;
+    top: 3%;
+}
+	
+	
+}
+
+
+
+
+
+
+
+/* DEMO PAGE */
+
+
+#showhide {
+    display: block;
+    position: fixed;
+    top: 100px;
+    width: 200px;
+    z-index: 9999999;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-box-shadow: 0 0 3px 0 rgba(25,25,25,0.1);
+    box-shadow: 0 0 3px 0 rgba(25,25,25,0.1);
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+}
+#showhide p {
+	
+    background: none repeat scroll 0 0 #F2F2F2;
+    border-image: none;
+    border-style: solid none;
+    line-height: 30px;
+    font-size:12px;
+    padding: 6px 0 5px 10px;
+    cursor: pointer;
+}
+
+
+#showhide p a {
+    color: #666;
+    border-bottom: none;
+}
+#showhide p a:hover {
+    color: #AAA;
+}
+#showhide .trigger {
+    background: url("../img/settings.png") no-repeat scroll center center #FFFFFF;
+    text-decoration: none;
+    border-radius: 0px 7px 7px 0px;
+    -webkit-box-shadow: 0 0 3px 0 rgba(25,25,25,0.1);
+    box-shadow: 0 0 3px 0 rgba(25,25,25,0.1);
+    display: block;
+    height: 41px;
+    position: absolute;
+    right: -43px;
+    text-indent: -9999px;
+    top: 0;
+    border-bottom: none;
+    width: 45px;
+    
+}
+
